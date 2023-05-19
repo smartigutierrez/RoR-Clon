@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tweet %>
+
+<div>
+  <%= link_to "Editar este tweet", edit_tweet_path(@tweet), class: 'btn btn-primary' %> 
+  <%= link_to "Volver a los tweets", tweets_path, class: 'btn btn-primary -' %>
+<br>
+<br>
+  <%= button_to "Eliminar este tweet", @tweet, method: :delete, class: 'btn btn-danger btn-lg' %>
+</div>

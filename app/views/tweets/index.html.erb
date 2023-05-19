@@ -1,0 +1,40 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lista de tweets</h1>
+<br>
+
+
+
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tweet</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= will_paginate @tweets %>
+<% @tweets.each do |tweet| %>
+ <tr>
+      <th scope="row"><%= tweet.id %></th>
+      <td><%= tweet.user_name %></td>
+      <td><%= tweet.description %></td>
+      <td><%= link_to "Ir al tweet", tweet %></td>
+    </tr>
+  <% end %>
+
+  </tbody>
+</table>
+
+
+<%= link_to 'Nuevo tweet', new_tweet_path, class: 'btn btn-primary btn-lg' %>
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<h1>Editar un tweet</h1>
+
+<%= render "form", tweet: @tweet %>
+
+<br>
+
+<div>
+  <%= link_to "Mostrar este tweet", @tweet, class: 'btn btn-primary btn-lg' %> 
+  <%= link_to "Volver a los tweets", tweets_path, class: 'btn btn-primary btn-lg' %>
+</div>
